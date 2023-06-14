@@ -7,15 +7,15 @@
   },
   "routes": [
     {
-      "source": "^/service/NewBenefitApp/(.*)$",
-      "target": "/service/NewBenefitApp/$1",
+      "source": "^/testing/(.*)$",
+      "target": "/testing/$1",
       "destination": "NewBenefitApp-app-srv",
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/NewBenefitAppService/(.*)$",
-      "target": "/$1",
-      "destination": "NewBenefitApp-app-srv-NewBenefitAppService",
+      "source": "^/service/NewBenefitApp/(.*)$",
+      "target": "/service/NewBenefitApp/$1",
+      "destination": "NewBenefitApp-app-srv",
       "authenticationType": "xsuaa"
     },
     {

@@ -52,6 +52,20 @@
       "label": "Build MTA: NewBenefitApp - PT",
       "taskType": "Build",
       "extensions": []
+    },
+    {
+      "type": "deploy",
+      "label": "Deploy and Enable Discovery to SAP Build",
+      "taskType": "Deploy",
+      "mtarPath": "mta_archives/*.mtar",
+      "cfTarget": "lcap_int_dev",
+      "cfEndpoint": "https://api.cf.jp10.hana.ondemand.com",
+      "cfOrg": "lcap_jp",
+      "cfSpace": "dev",
+      "extensions": [],
+      "dependsOn": [
+        "Build MTA: NewBenefitApp - PT"
+      ]
     }
   ]
 }
